@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Browser History Graph",
+  "version": "1.0",
+  "permissions": [
+    "webNavigation",
+    "tabs",
+    "storage",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon.png"
+  },
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "web_accessible_resources": [{
+    "resources": ["popup/js/*"],
+    "matches": ["<all_urls>"]
+  }]
+}
